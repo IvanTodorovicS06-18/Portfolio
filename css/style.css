@@ -8,12 +8,13 @@
 
 html {
   scroll-behavior: smooth;
+  width: 100% !important;
 }
 body{
    overflow-x: hidden;
    color: #ffff;
    width: 100% !important;
-  
+   height: 100% !important;
   
 
 }
@@ -33,6 +34,7 @@ body{
     background-color: transparent;
     padding: 0 !important;
     width: 100% !important;
+    height: 100% !important;
 }
 
 .introSekcija{
