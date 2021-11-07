@@ -297,7 +297,7 @@ body{
 
 #close-nav{
     position: absolute;
-    right: -100%;
+    right: -35%;
     top: -1rem;
     cursor: pointer;
     color: white;
