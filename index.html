@@ -206,10 +206,10 @@
                       <div class="modal-content bg-dark">
                         <div class="modal-header">
                           <h5 class="modal-title" id="hotelVideoModalLabel">Hotel Laravel</h5>
-                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          <button type="button" class="btn-close btn-close-white" id="closeBtn1" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <video controls width="100%">
+                          <video controls width="100%" id="video1">
                             <source src="video/hotelVideo.mp4" type="video/mp4">
                           </video>
                         </div>
@@ -274,10 +274,10 @@
                   <div class="modal-content bg-dark">
                     <div class="modal-header">
                       <h5 class="modal-title" id="postyVideoModalLabel">Posty</h5>
-                      <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                      <button type="button" class="btn-close btn-close-white" id="closeBtn2" data-bs-dismiss="modal" aria-label="Close" ></button>
                     </div>
                     <div class="modal-body">
-                      <video controls width="100%">
+                      <video controls width="100%" id="video2" >
                         <source src="video/postyVideo.mp4" type="video/mp4">
                       </video>
                     </div>
@@ -288,9 +288,7 @@
             </div>
             <div class="col-md-3 col-1"></div>
           </div>
-
-        
-                
+      
          
 
       </div>
@@ -368,10 +366,10 @@
                       <div class="modal-content bg-dark">
                         <div class="modal-header">
                           <h5 class="modal-title" id="courseVideoModalLabel">Elearning</h5>
-                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                          <button type="button" class="btn-close btn-close-white" id="closeBtn3" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                          <video controls width="100%">
+                          <video controls width="100%" id="video3">
                             <source src="video/courseVideo.mp4" type="video/mp4">
                           </video>
                         </div>
@@ -383,13 +381,7 @@
                     </div>
                     <div class="col-md-3 col-1"></div>
                   </div>
-                
-              
-                
-                
-                  
-                
-  
+
         </div>
   
       
@@ -408,11 +400,7 @@
 <footer id="contact">
   <div class="container" id="contact">
     <h3>Contact me</h3>
-    <div class="contanctInfo">
-      <i class="fas fa-phone"></i>
-      <a href="tel:+381 0611987357">0611987357</a>
-     
-    </div>
+    
 
     <div class="contanctInfo">
       <a href="mailto:ivantodorovic507@gmail.com" id="contact-link">
@@ -445,10 +433,37 @@
     </audio>
     
 </footer>
+
       <script src="js/bootstrap.min.js"></script>
+
+      <script>
+        var video1 = document.getElementById("video1");
+        var video2 = document.getElementById("video2");
+        var video3 = document.getElementById("video3");
+      
+          var closebtn1 = document.getElementById("closeBtn1").onclick = function(){
+          video1.pause();
+        
+        };
+
+        var closebtn2 = document.getElementById("closeBtn2").onclick = function(){
+          video2.pause();
+        
+        };
+
+        var closebtn3 = document.getElementById("closeBtn3").onclick = function(){
+          video3.pause();
+        
+        };
+     
+      
+
+      
+      </script>
+      
  <script>
-   var mySong = document.getElementById("mySong");
-   var icon = document.getElementById("icon");
+    var mySong = document.getElementById("mySong");
+    var icon = document.getElementById("icon");
 
  
    icon.onclick = function(){
@@ -470,11 +485,13 @@
 
  <script>
      const toggler = document.querySelector('#toggler');
-const closeNav = document.querySelector('#close-nav');
-const navigationItems = document.querySelectorAll('.navigation__item');
-const navigation = document.querySelector('.navigation-container');
-function slide(e){
+     const closeNav = document.querySelector('#close-nav');
+     const navigationItems = document.querySelectorAll('.navigation__item');
+     const navigation = document.querySelector('.navigation-container');
+
+     function slide(e){
     const slides = document.querySelectorAll('.slides');
+
     navigation.style.transform = "translateX(0)";
 
     if(toggler.classList.contains('appear')) toggler.classList.remove('appear');
@@ -521,11 +538,15 @@ function removeStyles(arr){
 // EVENT LISTENERS
 
 toggler.addEventListener('click',slide);
+
 closeNav.addEventListener('click',closeNavigation);
+
 navigationItems.forEach(item => {
     item.addEventListener('click',closeNavigation);
 })
 
  </script>
+
+
 </body>
 </html>
