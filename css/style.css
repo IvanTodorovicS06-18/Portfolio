@@ -131,10 +131,11 @@ body{
 #projectPhoto{
     float: right;
     width: 100%;
-    margin-bottom: 1%;
     border: 1px solid;
     cursor: pointer;
     margin-bottom: 2%;
+    padding: 0;
+  
   
   
 }
@@ -150,6 +151,7 @@ body{
     width: 100%;
     margin-bottom: 2%;
     cursor: pointer;
+    padding: 0;
 }
 
 #contact{
